@@ -1,0 +1,31 @@
+<div class="clicker-layout">
+  <div class="top-scores">
+    <h3>🏆 Top 10 Jugadores</h3>
+    <ol>
+      <li *ngFor="let score of topScores">
+        <span class="player">{{ score.player }}</span>
+        <span class="clicks">{{ score.clicks }} 🍔</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="clicker-container">
+    <h2>Clicker Game 🍔</h2>
+
+    <p>Tiempo restante: {{ timeLeft }}s</p>
+    <p>Clicks: {{ clicks }}</p>
+
+    <button (click)="startGame()" [disabled]="isRunning">Iniciar Juego</button>
+
+    <img
+      src="imagenes/hamb1.png"
+      class="burger"
+      (click)="addClick()"
+      [class.disabled]="!isRunning"
+    />
+
+    <p *ngIf="!isRunning && timeLeft === 0">
+      ¡Tiempo terminado! Hiciste {{ clicks }} clicks.
+    </p>
+  </div>
+</div>
