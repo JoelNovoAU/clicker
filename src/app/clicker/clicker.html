@@ -1,16 +1,16 @@
 <div class="clicker-layout">
   <div class="top-scores">
-    <h3>🏆 Top 10 Jugadores</h3>
+    <h3>Top 10 Jugadores</h3>
     <ol>
       <li *ngFor="let score of topScores">
         <span class="player">{{ score.player }}</span>
-        <span class="clicks">{{ score.clicks }} 🍔</span>
+        <span class="clicks">{{ score.clicks }} </span>
       </li>
     </ol>
   </div>
 
   <div class="clicker-container">
-    <h2>Clicker Game 🍔</h2>
+    <h2>Clicker Game </h2>
 
     <p>Tiempo restante: {{ timeLeft }}s</p>
     <p>Clicks: {{ clicks }}</p>
